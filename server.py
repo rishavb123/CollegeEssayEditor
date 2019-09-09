@@ -9,6 +9,7 @@ def root():
 
 @app.route('/files/<path:path>')
 def send_file(path):
+    print("Sending Fron " + str(path))
     return send_from_directory('files', path)
 
 if __name__ == '__main__':
